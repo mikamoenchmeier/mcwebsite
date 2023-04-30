@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("Screen Shot.png");
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 100px;
+    color: #00ff11;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  
+    p {
+    font-size: 50px;
+    color: #00ff11;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 0px;
+ }
+
+  button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #00ff11;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #00ff11;
+   }
+   
+   button::before {
+    content: '';
+    width: 0;
+    height: 1000%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #00ff11;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   button:hover::before {
+    width: 105%;
+   }
+   
+   button:hover {
+    color: #111;
+   }
+     
+
+   /* Adjust size for smaller screens */
+  @media (max-width: 1112px) {
+    
+    h1 {
+       padding-left: 5%;
+       font-size: 40px;
+    }
+
+    p{
+        font-size: 40px;
+    }
+
+    button{
+        font-size: 40px;
+    }
+ 
+   }
+   
+   /* Adjust size for even smaller screens */
+   @media (max-width: 576px) {
+   
+     h1 {
+       padding-left: 5%;
+       font-size: 30px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    button{
+        font-size: 20px;
+    }
+
+    }
